@@ -1,4 +1,5 @@
 //TS tests by the @akamitch
+//For lesson7 https://youtu.be/ZzK15vkO38c?si=OJt6-X2r9_DURK-v
 import { loadFixture, ethers, expect } from "./setup";
 
 describe("Demo", function() {
