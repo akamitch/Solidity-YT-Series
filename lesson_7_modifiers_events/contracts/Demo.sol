@@ -6,7 +6,7 @@ contract Demo {
     // require
     // revert
     // assert
-    address owner;
+    address public owner;
 
     event Paid(address indexed _from, uint _amount, uint _timestamp);
 
@@ -26,18 +26,10 @@ contract Demo {
         require(msg.sender == owner, "you are not an owner!");
         require(_to != address(0), "incorrect address!");
         _;
-        //require(...);
     }
 
     function withdraw(address payable _to) external onlyOwner(_to) {
-        // Panic
-        // assert(msg.sender == owner);
-        // Error
-        // require(msg.sender == owner, "you are not an owner!");
-        // if(msg.sender == owner) {
-        //     revert("you are not an owner!");
-        // } else {}
-        
+       
         _to.transfer(address(this).balance);
     }
 }
