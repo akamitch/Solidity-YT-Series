@@ -107,9 +107,6 @@ describe("MShop", function() {
 
     expect(await erc20.balanceOf(buyer.address)).to.eq(1)
 
-/*     await expect(() => tx).
-      to.changeEtherBalance(shop, tokenAmount) */
-
     await expect(() => sellTx).
       to.changeEtherBalance(shop, -sellAmount)
 
