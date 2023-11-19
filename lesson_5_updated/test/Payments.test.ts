@@ -5,7 +5,7 @@ describe("Payments", function() {
     const [user1, user2] = await ethers.getSigners();
 
     const Factory = await ethers.getContractFactory("Payments");
-    const payments = await Factory.deploy();
+    const payments = await Factory.deploy(); //в deploy() можно передавать аргументы для конструктора
     await payments.waitForDeployment();
 
     return { user1, user2, payments }
